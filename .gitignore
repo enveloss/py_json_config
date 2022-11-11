@@ -1,0 +1,5 @@
+test.py
+dist
+py_json_config.egg-info
+setup.py 
+setup.cfg
