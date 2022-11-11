@@ -8,7 +8,7 @@
 
 *Use this command to install the module*
 ```console
-$ > pip3 install json-config
+$ > pip3 install py_json_config
 ```
 
 ## Simple tutorial
@@ -24,12 +24,12 @@ $ > pip3 install json-config
 
 #### Import the module into your main .py file
 ```python
-import json_config
+import py_json_config
 ```
 
 #### Then you need to create some class with extend by the module
 ```python 
-class Config(json_config.JSONConfig):
+class Config(py_json_config.JSONConfig):
     def get_admins(self):
         return self.get_value('admins') 
 
@@ -65,7 +65,7 @@ config.get_admins() # [123]
 #     }
 # }
 
-class Config(json_config.JSONConfig):
+class Config(py_json_config.JSONConfig):
     def get_admins(self):
         return self.get_value('main.sub_main.admins') 
 
