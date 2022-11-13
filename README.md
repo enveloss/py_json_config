@@ -34,7 +34,9 @@ class Config(py_json_config.JSONConfig):
         return self.get_value('admins') 
 
     def add_admin(self, admin):
-        self.set_value('admins', admin)
+        admins = self.get_admins()
+        admins.append(admin)
+        self.set_value('admins', admins)
 ```
 
 #### That\`s it! Now let`s test it
@@ -70,7 +72,9 @@ class Config(py_json_config.JSONConfig):
         return self.get_value('main.sub_main.admins') 
 
     def add_admin(self, admin):
-        self.set_value('main.sub_main.admins', admin)
+        admins = self.get_admins()
+        admins.append(admin)
+        self.set_value('main.sub_main.admins', admins)
 ```
 
 ## Ther are also others functions here:
